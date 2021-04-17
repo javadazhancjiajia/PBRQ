@@ -9,13 +9,13 @@ import math
 if __name__ == '__main__':
     key_len = 100
     # 论文中T的长度    
-    t = 10 ** 4
+    t = 10 ** 3
     gray_bit = math.ceil(math.log2(t))
 
     print('read key_set and data_set')
     time1 = time.time()
     # 下面的两个文件路径表示测试关键字集合和测试数据集合，自行修改    
-    key_set, data_set = get_test_data('test_data/10x10/100', 'test_data/10x10/10x10_100_1.csv', 10000)
+    key_set, data_set = get_test_data('test_data/10x10/100', 'test_data/10x10/10x10_100_1.csv', 100)
     time2 = time.time()
     print(
         f'finish\nsize of key_set:{key_set.__len__()}\nsize of data_set:{data_set.__len__()}\ncost time:{time2 - time1}')
